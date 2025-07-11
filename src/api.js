@@ -3,7 +3,7 @@ import axios from "axios";
 
 
 const api = axios.create({
-    baseURL: "http://localhost:8005",
+    baseURL: "https://url-short-bacend.vercel.app",
     headers: {
         "Content-Type": "application/json",
     },
