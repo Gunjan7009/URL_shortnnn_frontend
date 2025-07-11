@@ -1,0 +1,219 @@
+/* Modal Overlay */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Modal Container */
+.modalContent {
+    background: white;
+   width: 90%; 
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    animation: fadeIn 0.3s ease-in-out;
+    font-family: 'Manrope', sans-serif;
+}
+
+/* Modal Header */
+.modalHeader {
+    background: #2c2c40;
+    color: white;
+    padding: 15px 20px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 400;
+    height: 20px;
+    font-family: 'Manrope', sans-serif;
+}
+.modalHeader h3{
+    font-weight: lighter;
+}
+
+/* Close Button */
+.closeButton {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Modal Body */
+.modalBody {
+    padding: 20px;
+    height: 450px;
+}
+
+/* Input Fields */
+.inputField, .textAreaField {
+    width: 94%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.textAreaField {
+    height: 100px;
+}
+/* Label Styling */
+.label {
+    font-size: 14px;
+    font-weight: 500;
+    /* margin-top: 10px; */
+    display: block;
+}
+.toggleContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+/* Required Asterisk */
+.required {
+    color: red;
+    margin-left: 2px;
+}
+
+/* Toggle Switch */
+.toggleSwitch {
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+/* Modal Footer */
+.modalFooter {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background: #f4f4f6;
+    border-top: 1px solid #e1e1e1;
+}
+
+/* Clear Button */
+.clearButton {
+    background: transparent;
+    color: #6c757d;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Create Button */
+.createButton {
+    background: #3b82f6;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: 0.4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196f3;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(14px);
+  }
+  
+
+  @media (max-width: 431px) {
+    .modalContent {
+        width: 95%;
+        max-width: 95%;
+    }
+
+    .modalHeader {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    .modalBody {
+        padding: 12px;
+        max-height: 350px;
+    }
+
+    .inputField,
+    .textAreaField {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .modalFooter {
+        padding: 10px;
+    }
+
+    .clearButton, .createButton {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .toggleSwitch {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

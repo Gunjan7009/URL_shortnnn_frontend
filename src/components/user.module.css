@@ -1,0 +1,67 @@
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  text-align: left;
+  font-family: 'Manrope', sans-serif;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile label {
+ width: 150px;
+}
+.label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.input {
+  width: 90%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+.buttonContainer{
+    margin-top: 80px;
+}
+.button {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.saveButton {
+  background-color: #1B48DA;
+  margin-bottom: 15px;
+}
+
+.saveButton:hover {
+  background-color: #0056b3;
+}
+
+.deleteButton {
+  background-color: #EB0D0D;
+}
+
+.deleteButton:hover {
+  background-color: #a71d2a;
+}
